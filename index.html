@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <title>Employe</title>
+</head>
+<body>
+    <div class="header">
+        <h5>Employee</h5>
+    </div>
+    <div class="upper-btn-box">
+        <div class="left-box">
+            <button id="add-btn"><i class="fa fa-plus"></i>&nbsp; Add Employe</button>
+            <button id="del-all-btn" style="background-color: #33B5E6;"><i class="fa fa-eraser"></i> &nbsp; Clear All Data</button>
+            <input type="checkbox" name="" id="del-all-box">
+        </div>
+        <div class="right-box">
+            <i class="fa fa-search"></i>
+            <input type="text" id="empId" placeholder="Enter Employe id">
+            <button style="background-color: #EE534F;">Search</button>
+        </div>
+    </div>
+    <div class="table-box">
+        <table>
+            <tr>
+                <th>Sr No</th>
+                <th>Profile</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+                <th>Office Code</th>
+                <th>Job Title</th>
+                <th>Action</th>
+            </tr>
+            <tbody id="table-data">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="modal">
+        <i class="fa fa-times-circle close-icon"></i>
+        <div class="left-modal">
+            <div class="img-box">
+                <img src="/R.png" id="profile-pic" width="150" height="150" alt="">
+                <i class="fa fa-plus"></i>
+                <input type="file" id="upload-field">
+            </div>
+        </div>
+        <div class="right-modal">
+            <form id="register-form">
+                <div class="input-box">
+                    <label for="id">Id</label>
+                    <input type="text" required id="id">
+                </div>
+                <div class="input-box">
+                    <label for="name">Name</label>
+                    <input type="text" required id="name">
+                </div>
+                <div class="input-box">
+                    <label for="l-name">Last Name</label>
+                    <input type="text" required id="l-name">
+                </div>
+                <div class="input-box">
+                    <label for="email">E-mail</label>
+                    <input type="text" required id="email">
+                </div>
+                <div class="input-box">
+                    <label for="office-code">Office Code</label>
+                    <input type="text" required id="office-code">
+                </div>
+                <div class="input-box">
+                    <label for="job-title">Job Title</label>
+                    <input type="text" required id="job-title">
+                </div>
+                <div class="input-box">
+                    <button id="register-btn">Register</button>
+                    <button id="update-btn" disabled="disabled" style="background-color: #EE534F;">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src='/index.js'></script>
+</body>
+</html>
